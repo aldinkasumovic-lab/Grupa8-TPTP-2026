@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang = "bs">
+
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/tptpstil.css">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>NFSBIH fanshop</title>
+
+    </head>
+
+
+<section class="shop-sekcija">
+
+ 
+  <div class="shop-zaglavlje">
+    <h2 class="shop-naslov">Kolekcija 2025/26</h2>
+    <p class="shop-podnaslov">Odaberi kategoriju i pronađi svoj dres</p>
+  </div>
+
+       
+       <!--data-tab atribut govori JS-u koju grupu kartica da pokaže.
+       Vrijednosti moraju odgovarati data-kategorija atributima na karticama.-->
+    
+  <div class="shop-tabovi">
+    <button class="tab-dugme aktivan" data-tab="muskarci"> muskarci</button>
+    <button class="tab-dugme" data-tab="zene"> zene</button>
+    <button class="tab-dugme" data-tab="djeca"> djeca</button>
+    <button class="tab-dugme" data-tab="igrac"> Shop by Player</button>
+  </div>
+
+  <!-- grid sa karticama -->
+
+  <div class="shop-grid" id="shop-grid">
+
+    <!-- muskarci -->
+
+    <article class="shop-kartica" data-kategorija="muskarci">
+
+      <!-- Badge s popustom — apsolutno pozicioniran u CSS-u -->
+
+      <div class="kartica-badge">-20%</div>
+
+      
+      <img
+        src="images/dres1.jpeg"
+        alt="Muški domaćin dres BiH 2025/26 — plavo-žuti dizajn, prednji prikaz"
+        class="kartica-slika dres1">
+
+      <div class="kartica-info">
+        <span class="kartica-tag">Muški</span>
+
+        <h3 class="kartica-naziv">Dres domaćin 2025/26</h3>
+        <p class="kartica-opis">Zvanični plavo-žuti dres reprezentacije BiH za domaće utakmice.</p>
+
+        <div class="kartica-dno">
+          <span class="kartica-cijena">89,90 KM</span>
+          <!-- href vodi na sadrzaj.html na tačan dio stranice (bookmark) -->
+          <a class="kartica-link">Detalji →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- muski gostujuci dres -->
+    <article class="shop-kartica" data-kategorija="muskarci">
+      <img
+        src="images/dres2.jpg"
+        alt="Muški gostujući dres BiH 2025/26 — bijelo-plavi dizajn, prednji prikaz"
+        class="dres2 kartica-slika">
+      <div class="kartica-info">
+        <span class="kartica-tag">Muški</span>
+        <h3 class="kartica-naziv">Dres gostujući 2025/26</h3>
+        <p class="kartica-opis"> gostujući dres nošen na EURO kvalifikacijama.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">89,90 KM</span>
+          <a  class="kartica-link">Detalji →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- muski trening dres -->
+    <article class="shop-kartica" data-kategorija="muskarci">
+      <img
+        src="images/dres3.jpg"
+        alt="Muški trening dres BiH 2025/26 — tamno plavi dizajn"
+        class="kartica-slika">
+      <div class="kartica-info">
+        <span class="kartica-tag">Muški</span>
+        <h3 class="kartica-naziv">Trening dres 2025/26</h3>
+        <p class="kartica-opis">Lagani trening dres s Dri-Fit tehnologijom. Idealan za vježbanje.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">69,90 KM</span>
+          <a class="kartica-link">Detalji →</a>
+        </div>
+      </div>
+    </article>
+
+    <!--  zene -->
+
+    <!-- zenski domaćin dres -->
+    <article class="shop-kartica" data-kategorija="zene">
+      <img
+        src="images/dres1.jpeg"
+        alt="Ženski domaćin dres BiH 2025/26 — slim fit kroj, plavo-žuti dizajn"
+        class="kartica-slika">
+      <div class="kartica-info">
+        <span class="kartica-tag">Ženski</span>
+        <h3 class="kartica-naziv">Dres domaćin Women</h3>
+        <p class="kartica-opis">Ženski kroj zvaničnog dresa BiH. Udoban slim fit dizajn.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">84,90 KM</span>
+          <a class="kartica-link">Detalji →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- zenski gostujući dres -->
+    <article class="shop-kartica" data-kategorija="zene">
+      <img
+        src="images/dres2.jpg"
+        alt="Ženski gostujući dres BiH 2025/26 — bijelo-zlatna kombinacija"
+        class="kartica-slika">
+      <div class="kartica-info">
+        <span class="kartica-tag">Ženski</span>
+        <h3 class="kartica-naziv">Dres gostujući Women</h3>
+        <p class="kartica-opis">Bijeli dres za žene. Moderan i udoban kroj.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">84,90 KM</span>
+          <a  class="kartica-link">Detalji →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- zenski trening dres -->
+    <article class="shop-kartica" data-kategorija="zene">
+      <div class="kartica-badge">Novo!</div>
+      <img
+        src="images/dres4.jpg"
+        alt="Ženski trening dres BiH 2025/26 — plavi s žutim detaljima"
+        class="kartica-slika">
+      <div class="kartica-info">
+        <span class="kartica-tag">Ženski</span>
+        <h3 class="kartica-naziv">Trening dres Women</h3>
+        <p class="kartica-opis">Novi ženski trening dres s malim grbom BiH. Lagan i prozračan.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">64,90 KM</span>
+          <a  class="kartica-link">Detalji →</a>
+        </div>
+      </div>
+    </article>
+  
+
+</section>
