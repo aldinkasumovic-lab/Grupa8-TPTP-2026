@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fan Shop – Retro  </title>
+  <link rel="stylesheet" href="css/tptpstil.css"> 
+</head>
+<script src="js/tptpskripte.js"></script>
+<body>
+
+
+<section class="shop-sekcija">
+
+ 
+  <div class="shop-zaglavlje">
+    <h2 class="shop-naslov">Retro klasici • Pokloni • Rasprodaja </h2>
+    <p class="shop-podnaslov">Oficijalna oprema i pokloni za navijače Bosne i Hercegovine</p>
+  </div>
+
+  
+  <div class="shop-tabovi">
+    <button class="tab-dugme aktivan" onclick="prikaziTab('retro', this)">Retro</button>
+    <button class="tab-dugme" onclick="prikaziTab('gifts', this)">Pokloni i Dodatci</button>
+    <button class="tab-dugme" onclick="prikaziTab('clearance', this)">Rasprodaja</button>
+  </div>
+
+  
+  <div class="shop-grid">
+
+
+
+    <div class="shop-kartica" data-tab="retro">
+      <span class="kartica-badge">Exclusive</span>
+      <img class="kartica-slika" src="images/Retro dres.png" alt="Home Kit 2002">
+      <div class="kartica-info">
+        <span class="kartica-tag">Domaći </span>
+        <h3 class="kartica-naziv">Domaći dres - Kvalifikacije za Svjetsko prvenstvo </h3>
+        <p class="kartica-opis">Klasični plavi dres iz kvalifikacija za Svjetsko prvenstvo 2002. Jedan od najprepoznatljivijih dresova ere.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">79 KM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-kartica" data-tab="retro">
+      <img class="kartica-slika" src="images/Retro dres 2.png" alt="Away Kit 1999">
+      <div class="kartica-info">
+        <span class="kartica-tag">Gostujući </span>
+        <h3 class="kartica-naziv">Gostujući dres - Kvalifikacije za Euro 2000</h3>
+        <p class="kartica-opis">Bijeli gostujući dres iz kvalifikacijske kampanje za Evropsko prvenstvo 2000. godine.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">79 KM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-kartica" data-tab="retro">
+      <img class="kartica-slika" src="images/Dres era nezavisnosti.png" alt="Home Kit 1996">
+      <div class="kartica-info">
+        <span class="kartica-tag">Domaći </span>
+        <h3 class="kartica-naziv"> Domaći dres - Klasik iz ere nezavisnosti</h3>
+        <p class="kartica-opis">Historijski dres iz prve decenije samostalne reprezentacije. Komad koji svaki kolekcionar mora imati.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">79 KM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-kartica" data-tab="retro">
+      <span class="kartica-badge">New</span>
+      <img class="kartica-slika" src="images/Midnight edioton.png" alt="Third Kit 2006">
+      <div class="kartica-info">
+        <span class="kartica-tag">Alternativni </span>
+        <h3 class="kartica-naziv">Alternativni dres - Midnight Edition</h3>
+        <p class="kartica-opis">Tamni alternativni dres iz 2006.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">89 KM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-kartica" data-tab="retro">
+      <span class="kartica-badge">WC Edition</span>
+      <img class="kartica-slika" src="images/Brazil dres.png" alt="Home Kit 2014">
+      <div class="kartica-info">
+        <span class="kartica-tag">Domaći </span>
+        <h3 class="kartica-naziv">Domaći dres - Svjetsko prvenstvo Brazi</h3>
+        <p class="kartica-opis">Legendarni dres s prvog Svjetskog prvenstva u historiji BiH. Brasil 2014 – nezaboravno.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">110 KM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-kartica" data-tab="retro">
+      <span class="kartica-badge">WC Edition</span>
+      <img class="kartica-slika" src="images/Brazil 2.png" alt="Away Kit 2014">
+      <div class="kartica-info">
+        <span class="kartica-tag">Gostujući</span>
+        <h3 class="kartica-naziv">Gostujući dres – Svjetsko prvenstvo Brazil</h3>
+        <p class="kartica-opis">Zlatni gostujući dres s Mundijala u Brazilu. Jedan od najljepših dresova ikad nošenih.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">110 KM</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="shop-kartica sakrivena" data-tab="gifts">
+      <img class="kartica-slika" src="images/Šal navijacki.png" alt="Fan Scarf">
+      <div class="kartica-info">
+        <span class="kartica-tag">Accessories</span>
+        <h3 class="kartica-naziv">Šal – Navijački</h3>
+        <p class="kartica-opis">Oficijalni navijački šal . Savršen za stadion ili svakodnevno nošenje.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">10 KM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-kartica sakrivena" data-tab="gifts">
+      <img class="kartica-slika" src="images/Kapa navijacka.png" alt="Retro Beanie">
+      <div class="kartica-info">
+        <span class="kartica-tag">Accessories</span>
+        <h3 class="kartica-naziv">Kapa – Retro Beanie Hat</h3>
+        <p class="kartica-opis">Zimska kapa Topla, udobna i stilska za svakog  navijača.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">15 KM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-kartica sakrivena" data-tab="gifts">
+      <span class="kartica-badge">New</span>
+      <img class="kartica-slika" src="images/zastava BiH.png" alt="WC 2014 Book">
+      <div class="kartica-info">
+        <span class="kartica-tag">Gifts</span>
+        <h3 class="kartica-naziv">Zastava - Klasik BiH </h3>
+        <p class="kartica-opis">Simbol ponosa i historije Bosne i Hercegovine.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">35 KM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-kartica sakrivena" data-tab="gifts">
+      <img class="kartica-slika" src="images/Šolja BiH.png" alt="WC Mug">
+      <div class="kartica-info">
+        <span class="kartica-tag">Gifts</span>
+        <h3 class="kartica-naziv">Šolja – Brazil World Cup Mug</h3>
+        <p class="kartica-opis">Keramička šolja s motivima Mundijala 2014. Savršen poklon za svakog Zmajevog navijača.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">10 KM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-kartica sakrivena" data-tab="gifts">
+      <img class="kartica-slika" src="images/Historic moments poster.png" alt="Pin Badge Set">
+      <div class="kartica-info">
+        <span class="kartica-tag">Gifts</span>
+        <h3 class="kartica-naziv">Historic Moments Poster</h3>
+        <p class="kartica-opis">Posteri koji oživljavaju najveće trenutke bh. fudbala. Od legendardnih utakmica do nezaboravnih pobjeda</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">22 KM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-kartica sakrivena" data-tab="gifts">
+      <span class="kartica-badge">Limited</span>
+      <img class="kartica-slika" src="images/Poster limited.png" alt="Retro Poster">
+      <div class="kartica-info">
+        <span class="kartica-tag">Gifts</span>
+        <h3 class="kartica-naziv">Golden Generation Poster (Limited)</h3>
+        <p class="kartica-opis">Limitirani retro-art poster A3 formata. Numerisano izdanje, samo 200 primjeraka.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">30 KM</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="shop-kartica sakrivena" data-tab="clearance">
+      <span class="kartica-badge">-40%</span>
+      <img class="kartica-slika" src="images/Euro clearance.png" alt="Home Kit 2010">
+      <div class="kartica-info">
+        <span class="kartica-tag">Domaći </span>
+        <h3 class="kartica-naziv">Domaći dres - 2010 – Kvalifikacije za Euro</h3>
+        <p class="kartica-opis">Zadnji komadi dresa iz 2010. Rasprodaja po sniženoj cijeni – ostala samo veličina XL.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">48 KM <small style="text-decoration:line-through; opacity:0.5; font-size:0.85rem;">79 KM</small></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-kartica sakrivena" data-tab="clearance">
+      <span class="kartica-badge">-30%</span>
+      <img class="kartica-slika" src="images/HOODIE.png" alt="Hoodie 2019">
+      <div class="kartica-info">
+        <span class="kartica-tag">Hoodie </span>
+        <h3 class="kartica-naziv">Zmajevi Hoodie – Fan Edition</h3>
+        <p class="kartica-opis">Navijački hoodie. Ostale veličine S i M. Kvalitetna pamučna mješavina.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">45 KM <small style="text-decoration:line-through; opacity:0.5; font-size:0.85rem;">60 KM</small></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-kartica sakrivena" data-tab="clearance">
+      <span class="kartica-badge">-50%</span>
+      <img class="kartica-slika" src="images/Training top.png" alt="Training Top 2017">
+      <div class="kartica-info">
+        <span class="kartica-tag">Training </span>
+        <h3 class="kartica-naziv">Trening dres 2017 – Predsezona</h3>
+        <p class="kartica-opis">Trenažerski dres iz predsezone 2017. Dostupan u svim veličinama po pola cijene.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">30 KM <small style="text-decoration:line-through; opacity:0.5; font-size:0.85rem;">60 KM</small></span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-kartica sakrivena" data-tab="clearance">
+      <span class="kartica-badge">-25%</span>
+      <img class="kartica-slika" src="images/Lopta potpisi.png" alt="Replica Ball 2018">
+      <div class="kartica-info">
+        <span class="kartica-tag">Gifts </span>
+        <h3 class="kartica-naziv"> Lopta Legea (Potpisana)</h3>
+        <p class="kartica-opis">Replika lopte s potpisima igrača iz 2018. Ograničena količina na raspolaganju.</p>
+        <div class="kartica-dno">
+          <span class="kartica-cijena">80 KM <small style="text-decoration:line-through; opacity:0.5; font-size:0.85rem;">70 KM</small></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+</body>
+</html>
