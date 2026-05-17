@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 :root {                        /*baza koda za cijelu stranicu*/
   --shop-plava: #002868;        
   --shop-zuta: #FECB00;         
@@ -283,4 +286,86 @@
   .shop-sekcija {
     padding: 32px 16px;
   }
+}
+
+.shop-footer {
+  background-color: var(--shop-plava);
+  color: var(--shop-bijela);
+  padding: 24px;
+}
+
+.footer-donji {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-donji p {
+  font-size: 0.82rem;
+  font-family: Arial, sans-serif;
+  opacity: 0.65;
+}
+
+.footer-linkovi {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-linkovi a {
+  color: var(--shop-bijela);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-family: Arial, sans-serif;
+  opacity: 0.65;
+  transition: opacity var(--shop-tranzicija), color var(--shop-tranzicija);
+}
+
+.footer-linkovi a:hover {
+  opacity: 1;
+  color: var(--shop-zuta);
+}
+
+@media (max-width: 600px) {
+  .footer-donji {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+body.dark-mode {
+  --shop-pozadina: #121212;
+  --shop-tekst: #f0f0f0;
+  --shop-bijela: #1e1e1e;
+  --shop-tag-boja: #2a2a2a;
+  --shop-sjena: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .shop-footer {
+  background-color: #0a0a0a;
+}
+
+.dark-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--shop-plava);
+  color: var(--shop-bijela);
+  border: 2px solid var(--shop-zuta);
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  transition: background-color var(--shop-tranzicija);
+  z-index: 999;
+}
+
+.dark-toggle:hover {
+  background-color: var(--shop-zuta);
+  color: var(--shop-plava);
 }

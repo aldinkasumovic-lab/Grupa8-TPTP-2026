@@ -21,4 +21,23 @@ function prikaziTab(odabraniTab, kliknutoGugme) {
   var poruka = document.getElementById('nema-rezultata');
   poruka.style.display = imaKartica ? 'none' : 'block';
 }
+
+function toggleDark() {
+  document.body.classList.toggle('dark-mode');
+
+  const dugme = document.querySelector('.dark-toggle');
+  if (document.body.classList.contains('dark-mode')) {
+    dugme.textContent = '☀️ Light Mode';
+    localStorage.setItem('darkMode', 'on');
+  } else {
+    dugme.textContent = '🌙 Dark Mode';
+    localStorage.setItem('darkMode', 'off');
+  }
+}
+
+
+if (localStorage.getItem('darkMode') === 'on') {
+  document.body.classList.add('dark-mode');
+  document.querySelector('.dark-toggle').textContent = '☀️ Light Mode';
+}
 //
