@@ -109,3 +109,119 @@ if (retroHash === "#gifts") {
 if (retroHash === "#clearance") {
     prikaziTab('clearance', document.querySelectorAll('.tab-dugme')[2]);
 }
+
+
+const targetDate = new Date("June 12, 2026 12:00:00").getTime();
+
+const countdown = setInterval(function () {
+
+    const now = new Date().getTime();
+
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) / (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60)) / 1000
+    );
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+
+        clearInterval(countdown);
+
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+    }
+
+}, 1000);
+
+const forma = document.getElementById("kontaktForma");
+
+forma.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    let validno = true;
+
+    document.querySelectorAll(".error").forEach(el => el.textContent = "");
+
+    document.querySelectorAll("input, select, textarea").forEach(el => {
+        el.classList.remove("greska");
+    });
+
+    const ime = document.getElementById("ime");
+    const prezime = document.getElementById("prezime");
+    const email = document.getElementById("email");
+    const telefon = document.getElementById("telefon");
+    const tema = document.getElementById("tema");
+    const poruka = document.getElementById("poruka");
+
+    const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    const telefonRegex = /^[0-9\s\-]+$/;
+
+    function prikaziGresku(input, porukaTekst) {
+
+        input.classList.add("greska");
+
+        input.nextElementSibling.textContent = porukaTekst;
+
+        validno = false;
+    }
+
+    if (ime.value.trim() === "") {
+        prikaziGresku(ime, "Unesite ime");
+    }
+
+    if (prezime.value.trim() === "") {
+        prikaziGresku(prezime, "Unesite prezime");
+    }
+
+    if (!emailRegex.test(email.value)) {
+        prikaziGresku(email, "Email nije ispravan");
+    }
+
+    if (!telefonRegex.test(telefon.value)) {
+        prikaziGresku(telefon, "Telefon nije ispravan");
+    }
+
+    if (tema.value === "") {
+        prikaziGresku(tema, "Odaberite temu");
+    }
+
+    if (poruka.value.trim() === "") {
+        prikaziGresku(poruka, "Unesite poruku");
+    }
+
+    if (validno) {
+
+        document.getElementById("uspjesnaPoruka").textContent =
+            "Hvala " + ime.value + ", uspješno ste poslali poruku!";
+    }
+});
+
+forma.addEventListener("reset", function() {
+
+    document.querySelectorAll(".error").forEach(el => el.textContent = "");
+
+    document.getElementById("uspjesnaPoruka").textContent = "";
+
+    document.querySelectorAll("input, select, textarea").forEach(el => {
+        el.classList.remove("greska");
+    });
+});
