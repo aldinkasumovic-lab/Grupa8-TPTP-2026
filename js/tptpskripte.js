@@ -78,3 +78,34 @@ for (var i = 0; i < tabDugmad.length; i++) {
         }
     });
 }
+
+const hash = window.location.hash;
+
+if (hash === "#men") {
+    tabDugmad[0].click();
+}
+
+if (hash === "#women") {
+    tabDugmad[1].click();
+}
+
+if (hash === "#kids") {
+    tabDugmad[2].click();
+}
+
+if (hash === "#players") {
+    tabDugmad[3].click();
+}
+const retroHash = window.location.hash;
+
+if (retroHash === "#retro") {
+    prikaziTab('retro', document.querySelectorAll('.tab-dugme')[0]);
+}
+
+if (retroHash === "#gifts") {
+    prikaziTab('gifts', document.querySelectorAll('.tab-dugme')[1]);
+}
+
+if (retroHash === "#clearance") {
+    prikaziTab('clearance', document.querySelectorAll('.tab-dugme')[2]);
+}
